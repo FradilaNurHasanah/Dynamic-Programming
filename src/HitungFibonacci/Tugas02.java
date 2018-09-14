@@ -12,19 +12,20 @@ public class Tugas02 {
         System.out.println("Kelas       : X RPL 2");
         System.out.println("No.Absen    : 15");
         
-        System.out.println("");
-        int [] berat = {4, 5, 2, 3, 7};
-        int [] bayaran  = {5000, 7000, 2000, 3000, 10000};
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Jumlah berat: ");
-        int total = scan.nextInt();
+        Scanner sistem = new Scanner(System.in);
+        int arr[]= {7, 5, 4, 3, 2};
+        int arr1[]= {10000, 7000, 5000, 3000, 2000};
+        int bayaran = 0;
         
-        for (int i = 0; i < berat.length; i++) {
-            int jumlah = total / berat[i];
-            total = total - (berat[i]*jumlah);
-            
-            System.out.println("jumlah" + berat[i] + "=" + jumlah);
+        System.out.print("Jumlah berat maksimal : ");
+        int n = sistem.nextInt();
+        
+        for (int i = 0; i < arr.length; i++) {
+            int hasil =  n / arr[i];
+            n = n - (arr[i] * hasil);
+            bayaran += hasil * arr1[i];
         }
+        System.out.println("Bayaran yang didapat : " + bayaran);
     }
 }
 
